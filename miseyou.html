@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/miseyou.css" text="text/css">
+    <script src="/javascript/jquery-3.6.4.min.js"></script>
+    <script>
+        var clicks=0;
+        function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = "今天想了你&nbsp;&nbsp;&nbsp;"+clicks+"&nbsp;&nbsp;&nbsp;次"; 
+        if(clicks==52){
+            alert("谢谢你想念我的52遍，爱你哦");
+        }
+        if(clicks==520){
+            alert("谢谢你想念我的520遍，爱你哦")
+        }
+        if(clicks==1314){
+            alert("谢谢你想念我的1314遍，爱你哦")
+        }
+
+    };      
+        
+        function 猜字游戏(true_word,guess) {
+            var true_word=Math.floor(Math.random()*100)
+            var x=0;
+            var y=100;
+            while(guess!=true_word){
+                guess=prompt("请输入你猜的数字")
+                if(guess<true_word){
+                x=guess;
+                alert("猜小了,范围"+x+"-"+y);
+            }
+                if(guess>true_word){
+                y=guess;
+                alert("猜大了,范围"+x+"-"+y)}
+                if(guess==true_word){
+                alert("猜对了");
+            break}
+            }
+        }
+var count=0;
+        function 打碎大蛋哥(){
+            count=0;
+            $(".img img").attr("src","../处理后素材/鸡蛋1.png")
+            $鸡蛋=$(".img img")
+            $鸡蛋.css("display","block")
+            
+        }
+
+            function 图片点击(){
+                count+=1;
+                $(".img img").css("margin-left",Math.floor(Math.random()*100)+"%")
+                if(count==5){
+                    $(".img img").attr("src","../处理后素材/鸡蛋2.png")
+                }
+                if(count==10){
+                    $(".img img").attr("src","../处理后素材/鸡蛋3.png")
+                }
+                if(count==15){
+                    $(".img img").attr("src","../处理后素材/鸡蛋4.png");
+                    alert("恭喜你成功打碎了大蛋哥的蛋");
+
+                    
+                }
+            }
+        function 切换1(){
+            $('#music1').attr("src","./music/偷.mp3")
+            $(".music img").attr("src","./music/img/偷.jpg")
+            var a=document.getElementById("title1").innerHTML="<h2>正在播放-马嘉祺-偷</h2>"
+            document.getElementById("audio").load()
+            document.getElementById("audio").play()
+
+        }
+        function 切换2(){
+            $('#music1').attr("src","./music/你的样子.mp3")
+            $(".music img").attr("src","./music/img/知足.jpg")
+            var a=document.getElementById("title1").innerHTML="<h2>正在播放-马嘉祺-你的样子</h2>"
+            document.getElementById("audio").load()
+            document.getElementById("audio").play()
+        }
+        function 切换3(){
+            $('#music1').attr("src","./music/在水一方.mp3")
+            $(".music img").attr("src","./music/img/知足.jpg")
+            var a=document.getElementById("title1").innerHTML="<h2>正在播放-马嘉祺-在水一方</h2>"
+            document.getElementById("audio").load()
+            document.getElementById("audio").play()
+        }
+    </script>
+    <title>当然是想你了</title>
+</head>
+<body>
+    <div class="head"><h2>宝贝 在这个网页里 我给你准备了一点可以响应的小东西</h2>
+    <a href="/index.html"><p>回到首页</p></a>
+    <p></p>
+    </div>
+    
+    <div class="mise_block" >
+        <img src="/图标/Apple.svg" width="200px" onclick="onClick()">
+        <p id="clicks" onclick="onClick()">点击</p></div>
+    
+    <div class="button">
+        <button onclick=alert ( "想你了" )>
+            点击弹出想你
+        </button>
+        <button onclick="猜字游戏()">
+            这个按钮会有一个猜字游戏
+        </button>
+    
+        <div class="game">
+        <h2>小游戏，打碎大蛋哥的蛋</h2>
+        <button onclick="打碎大蛋哥()">start</button>
+        <div class="img">
+            <img src="/处理后素材/鸡蛋1.png" onclick="图片点击()">
+        </div>
+    
+    </div>
+    </div>
+    <div class="music">
+
+        <p id="title1">正在播放-马嘉祺-知足</p>
+        <div class="bg">
+        <img src="./music/img/知足.jpg" alt="">
+    </div>
+        <audio controls="controls" id="audio">
+            <source src="./music/知足.mp3" type="audio/mpeg" id="music1">
+            您的浏览器太low了,不支持播放
+        </audio>
+        <ul>
+            <li onclick="切换1()">马嘉祺-偷</li>
+            <li onclick="切换2()">马嘉祺-你的样子</li>
+            <li onclick="切换3()">马嘉祺-在水一方</li>
+        </ul>
+    </div>
+</body>
+</html>
