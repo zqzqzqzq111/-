@@ -1,0 +1,81 @@
+body{
+    background-image: linear-gradient(to right,rgb(88, 83, 83),rgb(228, 222, 222));
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.main{
+    padding-top: 210px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    text-indent: 0px; 
+    line-height: 0px;
+    animation: myfirst 5s linear 2s infinite alternate;
+    text-align: center;
+}
+
+#icon{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-style: outset;
+    border-width: 10px;  
+    border-color:aliceblue;
+}
+@font-face{
+    font-family:"title1";
+    src: url("/font/4STAFF__.TTF");
+}
+@font-face{
+font-family: "title2";
+    src: url("/font/Karate.ttf");
+}
+#word1{
+    font-family:title1;
+    font-size: 50px;
+    color: bisque;
+}
+#word2{
+    font-family: title2;
+    font-size: 20px;
+    color: rgb(119, 117, 113);
+}
+body hr{
+    color: rgb(201, 192, 192);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.功能 img{
+    width: 45px;
+    margin-right: 40px;
+    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#about_me{
+    font-family: title1;
+    color: antiquewhite;
+    font-size:20px;
+    padding-top: 100px;
+    text-align: center;
+    
+   
+}
+div img{  
+    cursor: pointer;  
+    transition: all 0.5s;  
+    
+}  
+div img:hover{  
+    transform: scale(1.4);  
+}  
+.功能 img{  
+    cursor: pointer;  
+    transition: all 0.5s;  
+    
+}  
+.功能 img:hover{  
+    transform: scale(1.4);  
+}  
+
+@keyframes myfirst{
+    0%{left: 0px;}
+    100%{left: 50%;}
+}

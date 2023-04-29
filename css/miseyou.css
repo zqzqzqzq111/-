@@ -1,0 +1,90 @@
+body{
+    background-color: #cc163a;
+    color: #ffff;
+
+}
+.head{
+    margin: 0;
+    text-align: center;
+}
+.mise_block{
+    border:20px;
+    border-radius: 25%;
+    border-color: aliceblue;
+    border-style: hidden;
+    font-size: 30px;
+}
+.img img{
+    display: none;
+    margin-top: 20px;
+}
+.head a:hover{
+    font-size: large;
+    color: antiquewhite;
+    background-color: aliceblue;
+}
+button{
+    height: 30px;
+    border-bottom-style: double;
+    border-bottom-color: rgb(89, 146, 146)   ;
+    transition: all 0.9s;
+}
+button:hover{
+    
+    height:45px;
+    color:aliceblue;
+    background-color: #cc163a
+    ;
+}
+.music{
+    float: right;
+
+    width: 350px;
+    height: 550px;
+    font-size: large;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    margin-left: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10%;
+    padding-top: 10px;
+    box-shadow: 0 0 3px 3px #ccc;
+    text-align: center;
+
+}
+.music img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50% ;
+    animation: rotate 6s linear infinite;
+    box-shadow: 0 0 5px 3px #ccc;
+    text-align: center;
+    margin-top: 30px;
+}
+.bg{
+    width: 280px;
+    height: 280px;
+    border-radius: 10%;
+    background-color: rgb(37, 32, 32);
+    margin-left: 40px;
+}
+
+.music li{
+    list-style-image: url(../图标/Apple.svg);
+    color: rgb(238, 14, 14);
+    text-align: left;
+    
+    }
+.music li:hover{
+    font-size: 30px;
+    transition: all 0.5s;
+}
+/*图片旋转*/
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }   
+    100%{
+        transform: rotateZ(360deg);
+    }     
+}

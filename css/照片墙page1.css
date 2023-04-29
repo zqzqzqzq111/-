@@ -1,0 +1,20 @@
+body{
+    color: blueviolet;
+    font-size: 15px;
+    background-image: url(/img/13.png);
+}
+.bigimg img{
+    width: 1000px;
+    padding: 20px;
+}
+.imgs img{
+    height: 300px;
+    float: left;
+} 
+.all img{
+    cursor: pointer; 
+    transition: all 0.5s;
+}
+.all  :hover{
+    border-radius: 25%;
+}

@@ -1,0 +1,51 @@
+body{
+    background-image: url("/img/13.png");
+    color:blueviolet;
+    font-size: 15px;
+}
+h2{
+    font-size: large;;
+    border-style: groove;
+    border-right: 10;
+    
+    float: left; 
+}
+
+.buju{
+    border: 5%;
+    image-rendering: auto;
+    padding-top: 10px;
+    padding-left: 20%;
+    
+}
+.照片 img{
+    padding: 20px;
+    margin: 20px;  
+    Border: top right radius 100px;
+    padding-top: 20px;
+}
+.照片 img{
+    margin: 2px;
+
+    width: 400px;
+}
+div img{  
+    cursor: pointer;  
+    transition: all 0.5s;  
+}  
+div img:hover{  
+    transform: scale(1.4);  
+    border-radius: 25%;
+}  
+.a1 div{
+    display: flex;
+}
+/*图片动效*/
+#a2 {
+    opacity: 0;
+}
+
+.a1:hover #a2{
+    transition: 2s;
+    opacity: 1;
+}
